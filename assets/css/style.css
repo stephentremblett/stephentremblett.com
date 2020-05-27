@@ -341,6 +341,9 @@ responsive styles
     #about .bk {
         height:400px;
     }
+    #about .half p {
+        margin-right:0;
+    }
     .quarter {
         width:100%;
     }
