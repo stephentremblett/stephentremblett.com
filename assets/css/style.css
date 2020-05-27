@@ -312,7 +312,7 @@ responsive styles
         margin-bottom: 50px;
     }
     .portfolio-text {
-        margin: 0 -10px -50px -35px;
+        margin: 0 -35px -50px -10px;
         width: calc(100% + 45px);
         max-width: calc(100% + 45px);
     }
@@ -324,7 +324,7 @@ responsive styles
         padding:0;
     }
     .rslides_tabs {
-        width: 100%;
+        display:none;
     }
     .about-text {
         margin: -100px -10px 50px -20px;
