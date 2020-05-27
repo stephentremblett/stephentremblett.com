@@ -217,6 +217,10 @@ about styles
     padding:75px 0;
     background-color:white;
     color:#010101;
+    background-image:url(../img/aboutbk.png);
+    background-repeat:no-repeat;
+    background-position:top left;
+    background-size:contain;
 }
 .about-text {
     margin:-150px -25px 50px -45px;
@@ -285,4 +289,76 @@ footer .content > *:last-child {
     color:rgba(255,255,255,0.5);
     margin-top:50px;
     display:block;
+}
+
+
+/*
+responsive styles
+**********************/
+@media only screen and (max-width:1000px) {
+    .frame {
+        margin-right:30px;
+        margin-left:30px;
+    }
+    .half {
+        width:100%;
+    }
+    #intro a {
+        position: static;
+        display: block;
+        margin-bottom: 50px;
+    }
+    .portfolio-text {
+        margin: 0 -10px -50px;
+        width: calc(100% + 20px);
+        max-width: calc(100% + 20px);
+    }
+    .desc {
+        width: 100%;
+    }
+    .gall {
+        width:100%;
+        padding:0;
+    }
+    .rslides_tabs {
+        width: 100%;
+    }
+    .about-text {
+        margin: -100px -10px 50px -20px;
+        width: calc(100% + 30px);
+        max-width: calc(100% + 30px);
+    }
+    #about h2 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    #about .half:first-child {
+        margin: 0;
+        width: 100%;
+        border:0;
+        padding-bottom:35px;
+    }
+    #about .bk {
+        height:400px;
+    }
+    .quarter {
+        width:100%;
+    }
+    .list h3 {
+        margin-bottom:25px;
+    }
+    .list p {
+        margin-bottom:0;
+    }
+    footer {
+        margin:50px 0;
+    }
+    footer h2 {
+        font-size: 40px;
+        line-height: 50px;
+        margin-bottom:45px;
+    }
+    footer * {
+        text-align:left;
+    }
 }
