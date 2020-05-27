@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+    <title>Stephen Tremblett - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="frame">
+        <div id="intro">
+            <a href="mailto:stephentremblett@gmail.com">stephentremblett@gmail.com</a>
+            <h1>Stephen Tremblett<br/>—Creative Director<br></h1>
+            <strong>Selected work<br/>2016-2020 ↓</strong>
+        </div>
+    </div>
+    <img src="assets/img/text-portfolio.svg" class="portfolio-text"/>
+    <div class="frame">
+        <div class="project">
+            <div class="desc">
+                <h2>We Know Training</h2>
+                <div class="details">
+                    <p>
+                        <strong>Year:</strong> 2020<br/>
+                        <strong>Services:</strong> Brand, identity, web, print
+                    </p>
+                </div>
+                <p>
+                    A company that delivers training online needs to stand out in a saturated market. This new company not only needed a new name, but a completely fresh identity. Something that showcased it’s professionalism and expertise, but at the same time represented it’s fun staff, engaging client relationships, and above all uniqueness.
+                </p>
+            </div>
+            <div class="gall">
+                <ul class="rslides">
+                    <li><img src="http://stephentremblett.com/wp-content/uploads/2020/05/wkt_1.jpg" alt=""></li>
+                    <li><img src="http://stephentremblett.com/wp-content/uploads/2020/05/wkt_2.jpg" alt=""></li>
+                    <li><img src="http://stephentremblett.com/wp-content/uploads/2020/05/wkt_3.jpg" alt=""></li>
+                    <li><img src="http://stephentremblett.com/wp-content/uploads/2020/05/wkt_4.jpg" alt=""></li>
+                    <li><img src="http://stephentremblett.com/wp-content/uploads/2020/05/wkt_5.jpg" alt=""></li>
+                    <li><img src="http://stephentremblett.com/wp-content/uploads/2020/05/wkt_6.jpg" alt=""></li>
+                    <li><img src="http://stephentremblett.com/wp-content/uploads/2020/05/wkt_7.jpg" alt=""></li>
+                  </ul>
+            </div>
+        </div>
+        <div class="project">
+            <div class="desc">
+                <h2>Yardstick</h2>
+                <div class="details">
+                    <p>
+                        <strong>Year:</strong> 2017<br/>
+                        <strong>Services:</strong> Rebranding, web, print
+                    </p>
+                </div>
+                <p>
+                    Yardstick delivers online training as well as high-stakes testing. Being a full-service solution allowed Yardstick to stand out from the crowd on services alone, but a brand was needed to offset the amount of dull academic brands surrounding it. Mixing black and white colours, yellow accents, and both greyscale and full colour photography gave the brand a unique look that was hard to miss.
+                </p>
+            </div>
+            <div class="gall">
+                <ul class="rslides">
+                    <li><img src="http://stephentremblett.com/wp-content/uploads/2020/05/yardstick_1.jpg" alt=""></li>
+                    <li><img src="http://stephentremblett.com/wp-content/uploads/2020/05/yardstick_2.jpg" alt=""></li>
+                    <li><img src="http://stephentremblett.com/wp-content/uploads/2020/05/yardstick_3.jpg" alt=""></li>
+                    <li><img src="http://stephentremblett.com/wp-content/uploads/2020/05/yardstick_4.jpg" alt=""></li>
+                  </ul>
+            </div>
+        </div>
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/responsiveslides.js"></script>
+    <script>
+        $(function() {
+            $(".rslides").responsiveSlides({
+                auto: false,             // Boolean: Animate automatically, true or false
+                speed: 500,            // Integer: Speed of the transition, in milliseconds
+                timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
+                pager: true,           // Boolean: Show pager, true or false
+                nav: true,             // Boolean: Show navigation, true or false
+                random: false,          // Boolean: Randomize the order of the slides, true or false
+                pause: false,           // Boolean: Pause on hover, true or false
+                pauseControls: true,    // Boolean: Pause when hovering controls, true or false
+                prevText: "← Previous",   // String: Text for the "previous" button
+                nextText: "Next →",       // String: Text for the "next" button
+                maxwidth: "",           // Integer: Max-width of the slideshow, in pixels
+                navContainer: "",       // Selector: Where controls should be appended to, default is after the 'ul'
+                manualControls: "",     // Selector: Declare custom pager navigation
+                namespace: "rslides",   // String: Change the default namespace used
+                before: function(){},   // Function: Before callback
+                after: function(){}     // Function: After callback
+            });
+        });
+      </script>
+</body>
+</html>
