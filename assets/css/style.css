@@ -306,15 +306,19 @@ responsive styles
     .half {
         width:100%;
     }
+    h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
     #intro a {
         position: static;
         display: block;
         margin-bottom: 50px;
     }
     .portfolio-text {
-        margin: 0 -35px -50px -10px;
-        width: calc(100% + 45px);
-        max-width: calc(100% + 45px);
+        margin: 0 0 -50px 0;
+        width: 100%;
+        max-width: 100%;
     }
     .desc {
         width: 100%;
@@ -322,6 +326,10 @@ responsive styles
     .gall {
         width:100%;
         padding:0;
+    }
+    .rslides {
+        margin: 0 -35px 15px;
+        width: calc(100% + 70px);
     }
     .rslides_tabs {
         display:none;
