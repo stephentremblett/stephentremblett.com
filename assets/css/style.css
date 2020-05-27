@@ -296,6 +296,9 @@ footer .content > *:last-child {
 responsive styles
 **********************/
 @media only screen and (max-width:1000px) {
+    body {
+        background-size: 150%;
+    }
     .frame {
         margin-right:30px;
         margin-left:30px;
@@ -309,9 +312,9 @@ responsive styles
         margin-bottom: 50px;
     }
     .portfolio-text {
-        margin: 0 -10px -50px;
-        width: calc(100% + 20px);
-        max-width: calc(100% + 20px);
+        margin: 0 -10px -50px -35px;
+        width: calc(100% + 45px);
+        max-width: calc(100% + 45px);
     }
     .desc {
         width: 100%;
@@ -327,6 +330,10 @@ responsive styles
         margin: -100px -10px 50px -20px;
         width: calc(100% + 30px);
         max-width: calc(100% + 30px);
+    }
+    #about {
+        background-size: 150%;
+        background-position: top center;
     }
     #about h2 {
         font-size: 40px;
