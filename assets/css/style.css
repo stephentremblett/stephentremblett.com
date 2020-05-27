@@ -7,6 +7,10 @@ general styles
 }
 body {
     background-color:#010101;
+    background-image:url(../img/topbk.png);
+    background-position:top left;
+    background-size:contain;
+    background-repeat:no-repeat;
     color:white;
     line-height:1.5;
     font-size:16px;
@@ -46,9 +50,7 @@ frame styles
 .project {
     display:flex;
     flex-wrap:wrap;
-    padding-top:75px;
-    border-top:5px solid white;
-    margin-top:75px;
+    margin-top:100px;
 }
 .desc {
     width:25%;
@@ -106,6 +108,10 @@ intro styles
 /*
 project styles
 **********************/
+.desc {
+    border-top:5px solid white;
+    padding-top:35px;
+}
 .desc p {
     font-size:15px;
 }
