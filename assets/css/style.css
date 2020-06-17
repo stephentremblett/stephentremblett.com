@@ -41,8 +41,7 @@ em {
 frame styles
 **********************/
 .frame {
-    max-width:1300px;
-    margin:0 auto;
+    margin: 0 11.5vw;
 }
 @media only screen and (max-width:1400px){
     .frame {
@@ -206,15 +205,14 @@ slider styles
 }
 .rslides_nav {
     text-decoration: none;
-    color: white;
+    color: #010101;
     font-weight: 700;
     position: absolute;
     z-index: 99;
     bottom: calc(50% - 25px);
     height: 25px;
-    background: #010101;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    background: #ffffff;
+    padding: 25px;
     font-size: 45px;
     line-height: 22.5px;
 }
@@ -223,20 +221,16 @@ slider styles
     color:#9f9f9f;
 }
 .rslides_nav.prev {
-    padding-right:15px;
-    left:-15px;
+    left:-45px;
 }
 .rslides_nav.prev:hover {
-    padding-right:20px;
-    left:-25px;
+    left:-50px;
 }
 .rslides_nav.next {
-    right:-20px;
-    padding-left:15px;
+    right:-45px;
 }
 .rslides_nav.next:hover {
-    right:-25px;
-    padding-left:25px;
+    right:-50px;
 }
 .rslides_tabs li {
     text-indent: -9999px;
