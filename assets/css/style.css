@@ -19,6 +19,12 @@ body {
     font-weight:400;
     overflow-x:hidden;
 }
+@media only screen and (max-width:1600px) {
+    body {
+        font-size:14px;
+        line-height:1.6;
+    }
+}
 p {
     margin:0 0 25px;
 }
@@ -41,27 +47,39 @@ em {
 frame styles
 **********************/
 .frame {
-    margin: 0 11.5vw;
+    margin: 0 6.5vw;
 }
-@media only screen and (max-width:1400px){
+@media only screen and (max-width:1600px){
+    .frame {
+        margin: 0 3.5vw;
+    }
+}
+@media only screen and (max-width:1200px){
     .frame {
         margin-right:50px;
         margin-left:50px;
     }
+}
+.clear {
+    clear:both;
+    display:table;
+    width:100%;
 }
 #intro {
     position:relative;
     margin-top:100px;
 }
 .project {
-    margin-top:100px;
+    margin:100px 0 0    ;
 }
 .desc {
-    display:flex;
-    flex-wrap:wrap;
+    float:left;
+    width:30%;
 }
 .gall {
     position:relative;
+    float:left;
+    width:70%;
 }
 .content {
     display:flex;
@@ -86,14 +104,20 @@ h1 {
     letter-spacing:-1px;
     margin:0;
 }
+.project h1 {
+    font-size:65px;
+    margin:33vh 0 50px;
+}
 h2 {
-    font-weight: 700;
     font-size: 50px;
     line-height: 60px;
-    letter-spacing:-1px;
-    margin: 0 0 50px;
-    font-weight:900;
+    letter-spacing: -1px;
+    margin: 0 0 0px;
+    font-weight: 900;
     width: 100%;
+    border-top: 5px solid white;
+    padding-top: 40px;
+    max-width: 90%;
 }
 h2 em {
     font-weight:100;
@@ -102,11 +126,23 @@ h3 {
     margin:0;
     font-weight:700;
 }
-@media only screen and (max-width:1400px){
+.desc h3 {
+    font-weight:400;
+    margin-top:5px;
+}
+@media only screen and (max-width:1600px) {
+    h2 {
+        font-size: 40px;
+        line-height: 45px;
+        letter-spacing:0px;
+    }
+}
+@media only screen and (max-width:1200px){
     h2 {
         font-size: 35px;
         line-height: 45px;
         letter-spacing:0px;
+        max-width:100%;
     }
 }
 
@@ -120,6 +156,9 @@ intro styles
     top:0;
     right:0;
     font-weight:700;
+}
+#intro a:nth-child(2) {
+    top:30px;
 }
 #intro strong {
     display:block;
@@ -136,18 +175,20 @@ intro styles
 project styles
 **********************/
 .desc {
-    border-bottom:5px solid #fff;
-    padding:50px 0 40px;
-    display:flex;
-    flex-wrap:wrap;
+    padding:0px 0 40px;
 }
 .details {
     width:40%;
 }
 .desc p {
-    width:60%;
+    width:85%;
 }
-@media only screen and (max-width:1400px){
+.desc p strong {
+    display:block;
+    margin-bottom:10px;
+    text-transform:uppercase;
+}
+@media only screen and (max-width:1000px){
     .details {
         width:100%;
     }
@@ -205,32 +246,28 @@ slider styles
 }
 .rslides_nav {
     text-decoration: none;
-    color: #010101;
+    color: #fff;
     font-weight: 700;
     position: absolute;
     z-index: 99;
-    bottom: calc(50% - 25px);
+    bottom: calc(50% - 35px);
     height: 25px;
-    background: #ffffff;
-    padding: 25px;
-    font-size: 45px;
+    background: #010101;
+    padding: 20px 30px 15px;
+    font-size: 17px;
     line-height: 22.5px;
+    box-shadow: 0 5px 13px rgba(0,0,0,0.15);
+    text-transform: uppercase;
 }
 .rslides_nav:hover {
     opacity:1;
     color:#9f9f9f;
 }
 .rslides_nav.prev {
-    left:-45px;
-}
-.rslides_nav.prev:hover {
-    left:-50px;
+    left:0;
 }
 .rslides_nav.next {
-    right:-45px;
-}
-.rslides_nav.next:hover {
-    right:-50px;
+    right:0;
 }
 .rslides_tabs li {
     text-indent: -9999px;
@@ -238,26 +275,27 @@ slider styles
     width: 10px;
     border-radius: 100%;
     background-color: rgba(255,255,255,0.5);
+    border: 1px solid rgba(0,0,0,0.15);
 }
 .rslides_tabs li.rslides_here {
     background-color:#010101;
 }
+@media only screen and (max-width:1600px) {
+    .rslides_nav {
+        font-size: 17px;
+    }
+}
 @media only screen and (max-width:1000px) {
     .rslides_nav {
-        font-size: 30px;
-        padding: 15px;
-    }
-    .rslides_nav.next:hover,
-    .rslides_nav.prev:hover {
-        padding: 15px;
+        padding: 15px 15px 10px;
     }
     .rslides_nav.next,
     .rslides_nav.next:hover {
-        right:-25px;
+        right:-30px;
     }
     .rslides_nav.prev,
     .rslides_nav.prev:hover {
-        left:-25px;
+        left:-30px;
     }
 }
 
@@ -327,6 +365,8 @@ footer {
 footer h2 {
     font-size:50px;
     margin:0;
+    padding:0;
+    border:0;
 }
 footer a {
     color:white;
@@ -349,12 +389,6 @@ footer .content > *:last-child {
 /*
 responsive styles
 **********************/
-@media only screen and (min-width:1600px) {
-    body {
-        font-size:19px;
-        line-height:1.7;
-    }
-}
 @media only screen and (max-width:1000px) {
     body {
         background-size: 150%;
@@ -374,6 +408,9 @@ responsive styles
         position: static;
         display: block;
         margin-bottom: 50px;
+    }
+    #intro a:nth-child(2) {
+        margin-top: -45px;
     }
     .portfolio-text {
         margin: 0 0 -50px 0;
