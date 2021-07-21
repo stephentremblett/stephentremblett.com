@@ -13,7 +13,7 @@ body {
     background-repeat:no-repeat;
     color:white;
     line-height:1.5;
-    font-size:16px;
+    font-size:15px;
     margin:0;
     font-family: 'DM Sans', serif;
     font-weight:400;
@@ -46,8 +46,16 @@ em {
 /*
 frame styles
 **********************/
+.gif-container {
+    height: 550px;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .frame {
-    margin: 0 6.5vw;
+    margin: 0 4.5vw;
 }
 @media only screen and (max-width:1600px){
     .frame {
@@ -74,12 +82,12 @@ frame styles
 }
 .desc {
     float:left;
-    width:30%;
+    width:25%;
 }
 .gall {
     position:relative;
     float:left;
-    width:70%;
+    width:75%;
 }
 .content {
     display:flex;
@@ -91,7 +99,14 @@ frame styles
 .quarter {
     width:25%;
 }
-
+.video-frame {
+    background-color: white;
+    text-align: center;
+    padding: 35px 0;
+}
+.video-frame video {
+    box-shadow: -10px 10px 45px rgb(0 0 0 / 25%);
+}
 
 /*
 font styles
@@ -109,8 +124,8 @@ h1 {
     margin:33vh 0 50px;
 }
 h2 {
-    font-size: 50px;
-    line-height: 60px;
+    font-size: 40px;
+    line-height: 50px;
     letter-spacing: -1px;
     margin: 0 0 0px;
     font-weight: 900;
@@ -127,8 +142,9 @@ h3 {
     font-weight:700;
 }
 .desc h3 {
-    font-weight:400;
-    margin-top:5px;
+    font-weight: 400;
+    margin-top: 5px;
+    font-size: 15px;
 }
 @media only screen and (max-width:1600px) {
     h2 {
@@ -223,19 +239,35 @@ slider styles
     display: block;
     float: left;
 }
+.gif-container img {
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto;
+    box-shadow: -10px 10px 45px rgb(0 0 0 / 25%);
+    border: 0 !important;
+}
 .rslides img {
     display: block;
     height: auto;
     float: left;
     width: 100%;
-    border: 0;
+}
+@media only screen and (max-width:1000px) {
+    .rslides img {
+        display: block;
+        height: auto;
+        float: left;
+        width: 100%;
+        border: 0;
+        margin-bottom:15px;
+    }
 }
 .rslides_tabs {
     margin: 0;
     padding: 0;
     position: absolute;
-    bottom: 0px;
-    width: calc(100% - 50px);
+    bottom: -20px;
+    width: 100%;
     text-align: center;
     z-index: 99;
 }
@@ -244,17 +276,29 @@ slider styles
     list-style:none;
     margin:0 3px;
 }
+.rslides li p {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 99999;
+    background-color: #fff;
+    padding: 25px;
+    margin: 0;
+    color: #010101;
+    font-weight: bold;
+    font-size: 125%;
+}
 .rslides_nav {
     text-decoration: none;
     color: #fff;
     font-weight: 700;
     position: absolute;
     z-index: 99;
-    bottom: calc(50% - 35px);
+    bottom: calc(50% - 30px);
     height: 25px;
     background: #010101;
-    padding: 20px 30px 15px;
-    font-size: 17px;
+    padding: 20px 20px 15px;
+    font-size: 16px;
     line-height: 22.5px;
     box-shadow: 0 5px 13px rgba(0,0,0,0.15);
     text-transform: uppercase;
@@ -264,21 +308,20 @@ slider styles
     color:#9f9f9f;
 }
 .rslides_nav.prev {
-    left:0;
+    left: 20px;
 }
 .rslides_nav.next {
-    right:0;
+    right:20px;
 }
 .rslides_tabs li {
     text-indent: -9999px;
-    height: 10px;
-    width: 10px;
+    height: 8px;
+    width: 8px;
     border-radius: 100%;
-    background-color: rgba(255,255,255,0.5);
-    border: 1px solid rgba(0,0,0,0.15);
+    background-color: rgba(255,255,255,0.35);
 }
 .rslides_tabs li.rslides_here {
-    background-color:#010101;
+    background-color:#fff;
 }
 @media only screen and (max-width:1600px) {
     .rslides_nav {
@@ -287,15 +330,7 @@ slider styles
 }
 @media only screen and (max-width:1000px) {
     .rslides_nav {
-        padding: 15px 15px 10px;
-    }
-    .rslides_nav.next,
-    .rslides_nav.next:hover {
-        right:-30px;
-    }
-    .rslides_nav.prev,
-    .rslides_nav.prev:hover {
-        left:-30px;
+        display:none !important;
     }
 }
 
@@ -304,7 +339,7 @@ slider styles
 about styles
 **********************/
 #about {
-    margin-top:75px;
+    margin-top:150px;
     padding:75px 0;
     background-color:white;
     color:#010101;
@@ -342,7 +377,8 @@ about styles
 #about .half:first-child {
     margin-right:50px;
     width:calc(50% - 50px);
-    padding-bottom:75px;
+    padding-bottom:100px;
+    padding-top:100px;
     border-bottom:5px solid black;
 }
 #about .half p {
@@ -390,8 +426,13 @@ footer .content > *:last-child {
 responsive styles
 **********************/
 @media only screen and (max-width:1000px) {
+    .rslides li {
+        position: relative !important;
+        opacity: 1 !important;
+        display: block !important;
+    }
     body {
-        background-size: 150%;
+        background-size: 250%;
     }
     .frame {
         margin-right:30px;
@@ -425,8 +466,8 @@ responsive styles
         padding:0;
     }
     .rslides {
-        margin: 0 -35px 15px;
-        width: calc(100% + 70px);
+        margin: 0;
+        width: 100%;
     }
     .rslides_tabs {
         display:none;
@@ -439,6 +480,7 @@ responsive styles
     #about {
         background-size: 150%;
         background-position: top center;
+        margin-top:75px;
     }
     #about h2 {
         font-size: 40px;
@@ -449,6 +491,7 @@ responsive styles
         width: 100%;
         border:0;
         padding-bottom:35px;
+        padding-top:0;
     }
     #about .bk {
         height:400px;
@@ -475,5 +518,19 @@ responsive styles
     }
     footer * {
         text-align:left;
+    }
+    .gif-container {
+        height: 100%;
+        background:none;
+    }
+    .rslides li p {
+        position: relative;
+        top: 0;
+        margin-bottom: 30px;
+        float: left;
+        background: none;
+        color: #fff;
+        padding: 0;
+        left: 0;
     }
 }
